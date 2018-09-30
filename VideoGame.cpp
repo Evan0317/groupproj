@@ -1,39 +1,49 @@
-#pragma once
-#include <string>
+#include "VideoGame.h"
+#include <iostream>
 using namespace std;
 
-class VideoGame
+//Default Constructor Function Definition:
+VideoGame::VideoGame()
 {
-private:
-	string title;
-	string console;
-	double price;
-	int releaseYear;
-	int numberInStock;
-public:
-	//CONSTRUCTORS:
-	VideoGame();		//Default Constructor
-	VideoGame(string t, string c, double p, int year, int number);		//- uncomment after defined
+	title = "";
+	console = "";
+	price = 0;
+	releaseYear = 0;
+	numberInStock = 0;
+}
+//*Function for second constructor (with parameters) goes here*
+VideoGame::VideoGame(string t, string c, double p, int y, int n)
+{
+	title = t;
+	console = c;
+	price = p;
+	releaseYear = y;
+	numberInStock = n;
 
-	//SET AND GET FUNCTIONS:		
-	void setTitle(string t) { title = t; }
-	void setConsole(string c) { console = c; }
-	void setPrice(double p) { price = p; }
-	void setReleaseYear(int y) { releaseYear = y; }
-	void setNumberInStock(int n) { numberInStock = n;  }
-
-	string getTitle() { return title; }
-	string getConsole() { return console; }
-	double getPrice() { return price; }
-	int getReleaseYear() { return releaseYear; }
-	int getNumberInStock() { return numberInStock; }
+}
 
 
-	////INCREASE + DECREASE FUNCTIONS:
-	void increaseStock(int number); 	// increase numberInStock by number
-	void decreaseStock(int number) { number = 10, numberInStock = numberInStock - number; }// decrease numberInStock by number
+//**Functions to increase/decrease "number in stock" go here**
 
-	//DISPLAY FUNCTION:
-	void display();
-};
 
+void VideoGame::increaseStock(int number)
+{
+	
+	cout << "Orig NumInStock: ";
+	cout << numberInStock << endl;
+	number = 10;
+	numberInStock = numberInStock + number; 
+	cout << "Edited Number in stock: ";
+	cout << numberInStock << endl;
+
+}
+
+//Display Function Definition:
+void VideoGame::display()
+{
+	cout << "Title: " << getTitle() << endl;
+	cout << "Console: " << getConsole() << endl;
+	cout << "Price: $" << getPrice() << endl;
+	cout << "Release Year: " << getReleaseYear() << endl;				//	- needs set/get functions
+	cout << "Number In Stock: " << getNumberInStock() << endl << endl;	//- needs set/get functions
+}
