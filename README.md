@@ -1,4 +1,4 @@
-# Project #3 Instructions
+Project #3 Instructions
 
 The objective of this project is to implement a class and test each of the functions within a driver program. 
 
@@ -16,17 +16,21 @@ private:
 	int releaseYear;
 	int numberInStock;
 public:
-		1VideoGame();
-		2VideoGame(string t, string c, double p, int year, int number);
-		
-	6int getReleaseYear();
-	7int getNumberInStock();
-		 
-	11void setReleaseYear(int year);  
-12void setNumberInStock(int number);
-13void increaseStock(int number);	// increase numberInStock by number
-14void decreaseStock(int number);	// decrease numberInStock by number
-	15void display();
+	VideoGame();
+	VideoGame(string t, string c, double p, int year, int number);
+	string getTitle();
+	string getConsole();
+	double getPrice();
+	int getReleaseYear();
+	int getNumberInStock();
+	void setTitle(string t);
+	void setConsole(string c);
+	void setPrice(double p); 
+	void setReleaseYear(int year);  
+void setNumberInStock(int number);
+void increaseStock(int number);	// increase numberInStock by number
+void decreaseStock(int number);	// decrease numberInStock by number
+	void display();
 };
 
 
