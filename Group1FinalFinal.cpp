@@ -19,16 +19,24 @@ int main()
 	game1.setPrice(40.00);
 	game1.setReleaseYear(2016);
 	game1.setNumberInStock(910);
-	game1.display();
+	//displaying game1 using getfunctions.
+	cout << "Title: " << game1.getTitle() << endl;
+	cout << "Console: " << game1.getConsole() << endl;
+	cout << "Price: $" << game1.getPrice() << endl;
+	cout << "Release Year: " << game1.getReleaseYear() << endl;	
+	cout << "Number In Stock: " << game1.getNumberInStock() << endl << endl;
 	// increasing stock of game 1.
 	cout << "Increasing stock by 30. " << endl;
 	game1.increaseStock(30);
 	cout << endl;
-	// decreasing stock of game 2.
+	
+	
+	//Testing display function of game2.
 	game2.display();
+	// decreasing stock of game2
 	cout << "Decreasing stock by 20. " << endl;
 	game2.decreaseStock(20);
-	 cout << endl;
+	cout << endl;
 
 	system("pause");
 	return 0;
